@@ -1,80 +1,80 @@
 const router = require("express").Router();
-const { Expense } = require("../../models");
+const { Category } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// Get all Expenses
+// Get all Categories
 router.get("/", withAuth, async (req, res) => {
   try {
-    const expenseData = await Expense.findAll({
+    const categoryData = await Category.findAll({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(expenseData);
+    res.status(200).json(categoryData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-// Get one Expense
+// Get one Category
 router.get("/:id", withAuth, async (req, res) => {
   try {
-    const oneExpense = await Expense.findByPk({
+    const oneCategory = await Category.findByPk({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
-    res.status(200).json(oneExpense);
+    res.status(200).json(oneCategory);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-// Create Expense
+// Create Category
 router.post('/', withAuth, async (req, res) => {
     try {
-      const newExpense = await Expense.create({
+      const newCategory = await Category.create({
         ...req.body,
         user_id: req.session.user_id,
       });
   
-      res.status(200).json(newExpense);
+      res.status(200).json(newCategory);
     } catch (err) {
       res.status(400).json(err);
     }
   });
 
-// Update Expense
+// Update Category
 router.put('/', withAuth, async (req, res) => {
     try {
-        const updatedExpense = await Expense.update({
+        const updatedCategory = await Category.update({
             ...req.body,
             user_id: req.session.user_id,
         });
 
-        res.status(200).json(updatedExpense)
+        res.status(200).json(updatedCategory)
     } catch (err) {
         res.status(400).json(err)
     }
 })
 
-// Delete Expense
+// Delete Category
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const expenseData = await Expense.destroy({
+      const categoryData = await Category.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
         },
       });
   
-      if (!expenseData) {
+      if (!categoryData) {
         res.status(404).json({ message: 'No category found with this id!' });
         return;
       }
   
-      res.status(200).json(expenseData);
+      res.status(200).json(categoryData);
     } catch (err) {
       res.status(500).json(err);
     }
