@@ -6,4 +6,12 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
+// Get route for login page
+router.get("/login", (req, res) => {
+    if (req.session.user) {
+      return res.redirect("/");
+    }
+    res.render("login");
+  });
+
 module.exports = router
