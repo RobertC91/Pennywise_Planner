@@ -1,0 +1,17 @@
+{{!-- Adust handles --}}
+<h2>Good Afternoon, {{user.username}}</h2>
+<h3>Here are your current total expenses</h3>
+<h4>Monthly Expenses: {{user.monthlyExpenses}}</h4>
+
+
+<form id="dynamic-form">
+    <div id="account">
+      <h2>Accounts</h2>
+      <!-- 'Add Account' button is inside the form now -->
+      <button id="acc-btn" type="button">Add</button>
+    </div>
+
+    <button type="submit" id="calculate-button">Update</button>
+    <div id="net-worth-data-container"></div>
+    <script src="./models/expense.js"></script>
+  </form>
