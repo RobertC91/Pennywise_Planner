@@ -1,22 +1,24 @@
-<form>
+<form class="signup-form">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="Username" required>
+    <input id="signupUsername" type="text" placeholder="Enter Username" name="Username" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input  id="signupPassword" type="password" placeholder="Enter Password" name="psw" required>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    {{!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input id="signupPassRepeat" type="password" placeholder="Repeat Password" name="psw-repeat" required> --}}
 
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button class="btn btn-dark" type="button" class="cancelbtn">Cancel</button>
+      <button class="btn btn-dark" type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
+
+<script src="/js/signup.js"></script>
