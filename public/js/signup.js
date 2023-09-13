@@ -10,11 +10,11 @@ const signupFormHandler = async (event) => {
         const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ name, password }),
-            headers: { 'Content-Type': 'appication/json' },
+            headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
-            document.location.replace('/dasboard');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
