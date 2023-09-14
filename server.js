@@ -10,7 +10,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 const hbs = exphbs.create({});
 
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log('now listening')
   sequelize.sync({
     force: false
