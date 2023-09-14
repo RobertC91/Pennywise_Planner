@@ -1,17 +1,40 @@
-{{!-- Adust handles --}}
+
 <h2>Good Afternoon, {{user.username}}</h2>
 <h3>Here are your current total expenses</h3>
-<h4>Monthly Expenses: {{user.monthlyExpenses}}</h4>
 
 
-<form id="dynamic-form">
-    <div id="account">
-      <h2>Accounts</h2>
-      <!-- 'Add Account' button is inside the form now -->
-      <button id="acc-btn" type="button">Add</button>
+
+<div class="container">    
+    <!-- Expense Entry Form -->
+    <form id="expense-form">
+        <div class="input-group">
+            <select name="account_type[]">
+                <option value="account-type">Expense Type</option>
+                <option value="car">Car & Gas</option>
+                <option value="grocery">Grocery</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="subscription">Subscriptions</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" name="field_name[]" placeholder="Expense Name" value=""/>
+            <input type="number" name="field_name[]" placeholder="Amount" value=""/>
+            <a href="javascript:void(0);" class="remove_button">Delete</a>
+        </div>
+    </form>
+
+    <!-- Add Expense Button -->
+    <button id="create-expense">Add Expense</button>
+
+    <!-- Total Expenses Display -->
+    <div id="total-expenses">
+        Total Expenses: $<span id="total-amount">0.00</span>
     </div>
 
-    <button type="submit" id="calculate-button">Update</button>
-    <div id="net-worth-data-container"></div>
-    <script src="../models"></script>
-  </form>
+    <!-- Update Button -->
+    <button id="update-expenses">Update</button>
+<section id-"existingexp">
+{{#each expense}}
+{{/each}}
+</section>
+
+</div>
