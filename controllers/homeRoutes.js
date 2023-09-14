@@ -4,7 +4,7 @@ const { Category, Expense, User } = require("../models");
 // Get route for main
 router.get("/", async (req, res) => {
   try {
-    res.render("banner");
+    res.render("home");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -32,8 +32,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("*",(req, res)=>{
-  res.redirect("/")
-})
+// router.get("*",(req, res)=>{
+//   res.redirect("/")
+// })
 
 module.exports = router;
