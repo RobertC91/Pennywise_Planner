@@ -9,6 +9,10 @@
     "Liberation Mono", "Courier New", monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--font-family-sans-serif);
   background: #fbfaf5;
@@ -19,17 +23,15 @@ header {
   color: var(--wordoverblue);
   padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  position: sticky;
   top: 0;
   z-index: 100;
-  border-radius: 0 0 10px 10px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand {
-  font-size: 50px; /* Increase the font size for the title */
+  font-size: 5vw; /* Increase the font size for the title */
   margin: 0;
   font-style: italic;
   text-shadow: 2px 2px 4px #878057;
@@ -41,13 +43,12 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 3vw;
   text-shadow: 2px 2px 6px #878057;
 }
 
 .navnav li {
-  margin-right: 130px;
-  padding-right: 40px;
+  padding-right: 2vw;
 }
 
 .navnav a {
@@ -64,102 +65,27 @@ header {
   font-size: larger;
 }
 
-.slogan img {
-  height: 100%;
-  width: 100%;
-  opacity: 0.65;
-}
-
-/* CALCUALTOR */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  left: 0;
-  top: 0;
-}
-
-.modal_content {
-  background-color: #fefefe;
-  padding: 20px;
-  border: 1px solid #888;
-  margin: 15% auto;
-  width: 40%;
-  border-radius: 8px;
-}
-
-.modal_content h3 {
-  text-align: center;
-}
-
-.modal_content input {
-  margin-bottom: 15px !important;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
+a {
   text-decoration: none;
-  cursor: pointer;
 }
 
-.close_btn {
-  background-color: red;
-  color: white;
-  float: right;
-  padding: 8px 10px;
-  margin-bottom: 10px;
+.slogan-wrap {
+  position: relative;
 }
 
-.modal_footer {
-  padding-bottom: 20px;
-}
-
-#calculate {
-  margin-left: 40%;
+.slogan-bg {
+  opacity:0.4;
+  position:absolute;
+  left:0;
+  right:0;
+  width: 100%;;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
   .modal_content {
     width: 80%;
   }
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bolder;
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.login button {
-  font-weight: bold;
 }
 
 /* LOGIN SIGNUP */
@@ -178,40 +104,6 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-button {
-  background-color: #04aa6d;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-.container {
-  padding: 16px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Full-width input fields */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
 input[type="text"]:focus,
 input[type="password"]:focus {
   background-color: #ddd;
@@ -221,35 +113,6 @@ input[type="password"]:focus {
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04aa6d;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn,
-.signupbtn {
-  float: left;
-  width: 50%;
 }
 
 /* Add padding to container elements */
@@ -262,6 +125,24 @@ button:hover {
   content: "";
   clear: both;
   display: table;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button span {
+  flex: 1;
+  padding: 5px;
+}
+
+.delete-button .fas.fa.trash-alt {
+  color: red;
+  margin-left: 5px;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */

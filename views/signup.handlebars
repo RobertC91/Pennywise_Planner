@@ -7,16 +7,11 @@
     <label for="name"><b>Username</b></label>
     <input id="signupUsername" type="text" placeholder="Enter Username" required>
 
-    <label for="password"><b>Password</b></label>
-    <input  id="signupPassword" type="password" placeholder="Enter Password" required>
-
-    {{!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input id="signupPassRepeat" type="password" placeholder="Repeat Password" name="psw-repeat" required> --}}
-
+    <label for="password"><b>Password (min. 8 characters)</b></label>
+    <input  id="signupPassword" type="text" min="8" placeholder="Enter Password" required>
 
     <div class="clearfix">
-      <button class="btn btn-dark" type="submit" class="signupbtn">Sign Up</button>
-      <button class="btn btn-dark" type="button" class="cancelbtn">Cancel</button>
+      <button class="btn btn-dark" type="submit" id="signupBtn">Sign Up</button>
     </div>
   </div>
 </form>

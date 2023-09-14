@@ -46,7 +46,7 @@ router.post('/', withAuth, async (req, res) => {
   });
 
 // Update Expense
-router.put('/', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
         const updatedExpense = await Expense.update({
             ...req.body,
