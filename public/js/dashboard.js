@@ -33,7 +33,7 @@ document
     .then ((expenses) => {
       const expenseAmounts = expenses.map((expense) => expense.amount, 0)
 
-      const totalExpense = expenseAmounts.reduce((total, amount) => total + amount)
+      const totalExpense = expenseAmounts.reduce((total, amount) => total + amount).toFixed(2)
 
       const totalExpensesElement = document.getElementById('total-expenses')
       totalExpensesElement.textContent = `Total Expenses: $${totalExpense}`
