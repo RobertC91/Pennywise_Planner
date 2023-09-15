@@ -23,4 +23,24 @@ document
   .querySelector("#createNewExpense")
   .addEventListener("submit", newExpenseHandler);
 
+  fetch('/api/expenses')
+    .then((response) => {
+      if(!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+      return response.json()
+    })
+    .then ((expenses) => {
+      const expenseAmounts = expenses.map((expense) => expense.amount, 0)
+
+      const totalExpense = expenseAmounts.reduce((total, amount) => total + amount)
+
+      const totalExpensesElement = document.getElementById('total-expenses')
+      totalExpensesElement.textContent = `Total Expenses: $${totalExpense}`
+    })
+
+    .catch((error) => {
+      console.error('Error fetching expense data:', error)
+    })
+
 

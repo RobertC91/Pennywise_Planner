@@ -18,10 +18,9 @@
     </div>
 </section>
 
-<script src="/js/dashboard.js"></script>
 {{#if expenses.length}}
 <section class="expense-list"></ul>
-<h3>Here are your current expenses</h3>
+<h3 id="total-expenses">Here are your current expenses</h3>
 {{#each expenses as |expense|}}
 <div href="/api/expenses/{{expense.id}}" class="card" style="width: 100%; align-items:center; background-color: #dae1e7">
     <div class="card-body">
