@@ -23,14 +23,12 @@
 <section class="expense-list"></ul>
 <h3>Here are your current expenses</h3>
 {{#each expenses as |expense|}}
-<div href="/api/expenses/{{expense.id}}" class="card" style="width: 97%; align-items:center; background-color: #dae1e7">
+<div href="/api/expenses/{{expense.id}}" class="card" style="width: 100%; align-items:center; background-color: #dae1e7">
     <div class="card-body">
         <h5 class="card-title">Expense: {{expense.description}}</h5>
         <p class="card-text">Amount: {{expense.amount}}</p>
 
-        <button class="delete-button" data-id="{{expense.id}}">
-            <span>Delete</span>
-            <i class="fas fa-trash-alt"></i>
+        <button class="btn btn-danger" class="delete-button" data-id="{{expense.id}}">DELETE
         </button>
     </div>
 </div>
