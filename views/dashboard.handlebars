@@ -22,7 +22,7 @@
 <section class="expense-list"></ul>
 <h3 id="total-expenses" style="margin-left: 20px;">Here are your current expenses</h3>
 {{#each expenses as |expense|}}
-<div href="/api/expenses/{{expense.id}}" class="card" style=" margin-left: 20px; width: 50%; align-items: center; background-color: #d4d5ca">
+<div class="card" style=" margin-left: 20px; width: 50%; align-items: center; background-color: #d4d5ca">
     <div class="card-body d-flex flex-column justify-content-center align-items-center">
         <h5 class="card-title text-center">Expense: {{expense.description}}</h5>
         <p class="card-text text-center">Amount: {{expense.amount}}</p>

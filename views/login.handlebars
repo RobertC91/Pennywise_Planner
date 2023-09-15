@@ -1,14 +1,24 @@
-<form class="login-form">
-    <div class="container">
-      <label for="name"><b>Username</b></label>
-      <input id="loginUsername"type="text" placeholder="Enter Username" name="name" required>
-  
-      <label for="password"><b>Password</b></label>
-      <input id="loginPass"type="password" placeholder="Enter Password" name="password" required>
-  
-      <button id="loginBtn" class="btn btn-dark" type="submit">Login</button>
-      <a href="/signup">Sign Up</a>
-    </div>
-  </form>
+<div class="row">
+  <div class="col-md-6">
+    <h2 style="margin-left: 20px">Login</h2>
+
+    <form class="form login-form" style="margin-left: 20px; border-style: none">
+      <div class="form-group">
+        <label for="email-login">E-mail:</label>
+        <input class="form-input" type="text" id="loginEmail" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="loginPassword" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-dark" type="submit">Login</button>
+        <a href="./signup">Signup</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
 
 <script src="/js/login.js"></script>

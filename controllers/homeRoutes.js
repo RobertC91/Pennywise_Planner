@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, Expense, User } = require("../models");
+const { Expense, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Get route for main

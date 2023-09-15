@@ -19,13 +19,6 @@ Expense.init(
         type:DataTypes.FLOAT,
         allowNull:false
     },
-    category_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'category',
-            key: 'id'
-        }
-    },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
@@ -34,10 +27,11 @@ Expense.init(
         }
     }
 },{
-    sequelize,   
+    sequelize,
+    timestamps: false, 
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog',
+    modelName: 'expense',
 });
 
 module.exports = Expense
