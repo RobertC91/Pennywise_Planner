@@ -1,36 +1,21 @@
 # Pennywise_Planner
 
-## User Story
+## License
 
- As a user who wants to manage my expenses effectively, I want to be able to log my daily expenses, categorize them, and view a summary of my spending over time so that I can track my financial habits and make informed decisions about my finances.
+MIT License
 
-## Acceptance Criteria
+## Screenshot
 
-GIVEN an Expense Tracker site
+![Alt text](<public/images/Pennywise Planner.png>)
 
-WHEN I visit the expense tracker application
-THEN I should see a user-friendly homepage with clear navigation options.
+## Heroku Deployment
 
-WHEN I should be able to register for an account by providing my username, email address, and a secure password.
-THEN After registering, I should be able to log in using my username and password.
+https://git.heroku.com/fathomless-harbor-85925.git
 
-WHEN I log in
-THEN I should be redirected to my personal dashboard, which displays a summary of my expenses, including total spending for the current month and a breakdown by categories (e.g., groceries, transportation).
+## Description
 
-WHEN on my dashboard 
-THEN I should see options to add a new expense entry. When adding a new expense, I should be able to specify the date, amount, category, and description of the expense.
+This is an expense tracker website. You create an account or login to access your dashboard. On the dashboard you can add expenses you have and keep track of how much you've spent and where. There is a section above the expenses that tracks the total amount of all your expenses. In the future I would like to implement a photo upload system to electronically store receipts as well as graphs to track the types of expenses you have and display them. I also would like to implement categories for your expenses.
 
-WHEN on my dashboard 
-THEN I should see visual representations of my spending habits, such as charts or graphs, to help me understand where my money is going.
+## Installation
 
-WHEN I view a list of all my expense entries, sorted by date, on my dashboard. 
-THEN Each entry should display the date, category, amount, and description.
-
-WHEN I click on an expense entry to view more details, including the ability to edit or delete the entry.
-THEN I should be able to categorize my expenses into predefined categories (e.g., food, utilities, entertainment) or create custom categories.
-
-WHEN I search for specific expense entries
-THEN I should be able to filter and search by date, category, or keyword.
-
-WHEN I click log out 
-THEN I should be logged out securely when I'm finished using the application.
+You will need to run: npm install in your terminal to have all the required packages.
